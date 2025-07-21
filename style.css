@@ -1,0 +1,119 @@
+/* global style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+.btn{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    background-color: #FD6E0A;
+    border: 2px solid #FD6E0A;
+    border-radius: 5px;
+    padding: 1.25rem 2.25rem;
+}
+.btn-2{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FD6E0A;
+    background-color: #FFF8F3;
+    border: 2px solid #FD6E0A;
+    border-radius: 5px;
+    padding: 1.25rem 2.25rem;
+}
+.p{
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #757575;
+    line-height: 1.875rem;
+}
+/* header section */
+header{
+    background-color: #FFF8F3;
+}
+
+/* nav */
+#nav{
+    max-width: 1140px;
+    margin: auto;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav h2{
+    font-size: 2.8125rem;
+    font-weight: 800;
+}
+#nav h2 span{
+    color: rgba(253, 110, 10, 1);
+}
+.nav-list{
+    display: flex;
+    gap: 3.125rem;
+    align-items: center;
+}
+.nav-list li{
+    list-style: none;
+}
+.nav-list a{
+    text-decoration: none;
+        color: #474747;
+
+}
+/* banner style */
+
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
+    /* background-image: url(./images/developer.png),url(./images/header_bg.png);
+    background-repeat: no-repeat;
+    background-position: left top, bottom right; */
+}
+.banner-content{
+    margin-left: 230px;
+}
+.banner-content h2{
+    font-size: 2.8125rem;
+    font-weight: 700;
+    color: #474747;
+}
+.banner-content h1{
+    font-size: 5.3125rem;
+    font-weight: 800;
+}
+.banner-content p{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.banner-content .btn{
+    margin-right: 30px;
+}
+.banner-img img{
+    width: 100%;
+    display: block;
+}
+/* responsive media query */
+
+@media screen and (max-width:576px) {
+    #nav{
+        flex-direction: column;
+    }
+    #nav h2{
+        margin-bottom: 1rem;
+    }
+}
+@media screen and (max-width:1200px) {
+    #banner{
+        flex-direction: column-reverse;         
+    }
+    .banner-content{
+    margin-left: 0px;
+}
+}
