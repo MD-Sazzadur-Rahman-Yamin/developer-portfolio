@@ -35,7 +35,7 @@
 
 .section-tittle {
     font-size: 2.1875rem;
-    font-weight: 800;
+    font-weight: 800;text-align: center;
 }
 
 main section {
@@ -173,38 +173,80 @@ main {
 
 /* What I do list */
 
-.what-i-do-content{
+.what-i-do-content {
     text-align: center;
     max-width: 900px;
     margin: auto;
 }
 
-.what-i-do-content p{
+.what-i-do-content p {
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
-.what-i-do-card-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.what-i-do-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
+
 /* box-shadow: [horizontal-offset] [vertical-offset] [blur-radius] [spread-radius] [color] [inset]; */
-.what-i-do-card{
+.what-i-do-card {
     padding: 30px;
     box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.060);
 }
 
-.what-i-do-card h4{
+.what-i-do-card h4 {
     font-size: 1.25rem;
     font-weight: 800;
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
+/* summary fo resume */
+
+.summary-contain{
+    margin-bottom: 113px;
+}
+
+.summary-of-resume{
+    display: flex;
+    gap: 24px;
+}
+
+.summary-of-resume-education h3,.summary-of-resume-experience h3{
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #474747;
+}
+
+.summary-of-resume-card{
+    margin: 30px 0px;
+}
+
+.summary-of-resume-card h4{
+    font-size: 1.5625rem;
+    font-weight: 800;
+    color: #474747;
+}
+.summary-of-resume-card h5{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #757575;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.download-cv-btn{
+    text-align: center;
+    margin-top: 50px;
+}
+
 /* responsive media query */
 
 @media screen and (max-width:576px) {
+
+    /* nav */
     #nav {
         flex-direction: column;
     }
@@ -212,9 +254,12 @@ main {
     #nav h2 {
         margin-bottom: 1rem;
     }
+
 }
 
 @media screen and (max-width:1200px) {
+
+    /* herder */
     #banner {
         flex-direction: column-reverse;
     }
@@ -222,4 +267,32 @@ main {
     .banner-content {
         margin-left: 0px;
     }
+
+
+
+    /* about me */
+    #about-me {
+        padding: 65px 65px;
+    }
+
+    .about-me-card-container {
+        flex-direction: column;
+    }
+
+    /* what i do container */
+    .what-i-do-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* summary section */
+    .summary-of-resume{
+        flex-direction: column;
+    }
+
+
+    .summary-of-resume-card,
+    .summary-of-resume-education h3,
+    .summary-of-resume-experience h3{
+        text-align: center;
+    }
+
 }
